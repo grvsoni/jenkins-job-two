@@ -1,6 +1,6 @@
 // Load the shared library named 'shared-lib' (configured under
 // Manage Jenkins -> Global Pipeline Libraries).
-@Library('shared-lib') _
+@Library('jenkins-shared-library') _
 
 node {
     checkout scm
