@@ -1,4 +1,13 @@
 {
   "serviceName": "orders-api",
-  "environment": "staging"
+  "environment": "staging",
+  "deploy": {
+    "replicas": 2,
+    "region": "us-east-1",
+    "strategy": "rolling"
+  },
+  "notifications": {
+    "slack": "#deploys-staging",
+    "email": ["team@example.com"]
+  }
 }

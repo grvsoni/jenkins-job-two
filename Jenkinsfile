@@ -9,5 +9,10 @@ node {
     def config = readJSON file: 'config.json'
 
     // ... and pass them explicitly into the shared-library function.
-    runConfigJob(serviceName: config.serviceName, environment: config.environment)
+    runConfigJob(
+        serviceName:   config.serviceName,
+        environment:   config.environment,
+        deploy:        config.deploy,
+        notifications: config.notifications
+    )
 }
