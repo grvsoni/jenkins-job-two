@@ -6,7 +6,7 @@ node {
     checkout scm
 
     // Read the params from this repo's config.json ...
-    def config = readJSON file: 'config.json'
+    def config = readJSON file: 'config/config.json'
 
     // ... and pass them explicitly into the shared-library function.
     runConfigJob(
